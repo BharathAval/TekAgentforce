@@ -1,0 +1,5 @@
+{
+  "description" : "Response structure for scheduled Service Appointments",
+  "lightning:type" : "@apexClassType/GetServiceAppointment.ServiceAppointmentOutput",
+  "title" : "DoctorResponse"
+}

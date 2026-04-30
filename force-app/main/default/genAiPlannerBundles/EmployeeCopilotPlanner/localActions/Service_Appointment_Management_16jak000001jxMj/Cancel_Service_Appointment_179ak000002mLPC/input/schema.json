@@ -1,0 +1,21 @@
+{
+  "required" : [ "appointmentNumber", "cancellationReason" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "appointmentNumber" : {
+      "title" : "appointmentNumber",
+      "description" : "appointment number",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "cancellationReason" : {
+      "title" : "cancellationReason",
+      "description" : "cancellation reason",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

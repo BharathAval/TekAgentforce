@@ -1,0 +1,84 @@
+{
+  "required" : [ "EndDateTime", "StartDateTime", "doctorName", "recordId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "EndDateTime" : {
+      "title" : "EndDateTime",
+      "description" : "End date",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "StartDateTime" : {
+      "title" : "StartDateTime",
+      "description" : "Start Date",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "accountId" : {
+      "title" : "accountId",
+      "description" : "Account Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "accountName" : {
+      "title" : "accountName",
+      "description" : "Account Name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "appointmentDetails" : {
+      "title" : "appointmentDetails",
+      "description" : "Appointment details",
+      "lightning:type" : "@apexClassType/ApptBooking__AppointmentDetailsOutput?isAuraEnabled=true",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "checkSA" : {
+      "title" : "checkSA",
+      "description" : "check sa",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "lightning__recordInfoType",
+        "lightning:sObjectInfo" : {
+          "apiName" : "ServiceAppointment"
+        }
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "doctorName" : {
+      "title" : "doctorName",
+      "description" : "doctors name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "isSA" : {
+      "title" : "isSA",
+      "description" : "is SA?",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "loggedInUserId" : {
+      "title" : "loggedInUserId",
+      "description" : "logged in user id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "recordId" : {
+      "title" : "recordId",
+      "description" : "recordID",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

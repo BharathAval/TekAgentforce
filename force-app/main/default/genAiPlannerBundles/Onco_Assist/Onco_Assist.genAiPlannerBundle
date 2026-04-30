@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <attributeMappings>
+        <attributeName>Service_Appointment_Management_16jak000001hc4f.Create_Service_Appointment_Employee_179ak000002k20r.input_lastName</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>Visitor_Name</mappingTargetName>
+        <mappingType>ContextVariable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>Get_Scheduled_Service_Appointments_16jak000001hc4f.Get_Scheduled_Service_Appointments_179ak000002qfSX.input_accountName</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>Visitor_Name</mappingTargetName>
+        <mappingType>ContextVariable</mappingType>
+    </attributeMappings>
+    <description>Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues.</description>
+    <localActionLinks>
+        <genAiFunctionName>AnswerQuestionsWithKnowledge_16jak000001hc4f</genAiFunctionName>
+    </localActionLinks>
+    <localTopicLinks>
+        <genAiPluginName>Finding_Doctors_16jak000001hc4f</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>GeneralFAQ_16jak000001hc4f</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Get_Scheduled_Service_Appointments_16jak000001hc4f</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Service_Appointment_Management_16jak000001hc4f</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>Service_Appointment_Management_16jak000001hc4f</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This will schedule Service appointment for the patients</description>
+        <developerName>Service_Appointment_Management_16jak000001hc4f</developerName>
+        <genAiPluginInstructions>
+            <description>Create, update, and delete Service Appointment records based on structured input, validating business rules and handling errors safely.</description>
+            <developerName>instructions_0_1776076397591</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776076397591</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Always ask for the doctorName so that for the doctor we can schedule the appointment.</description>
+            <developerName>instructions_0_1776150349821</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776150349821</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After asking for the doctor’s name, always ask the user for the start date and time of the appointment.
+Use the provided value as StartDateTime.
+Always calculate EndDateTime by adding 1 hour to the StartDateTime.
+Use these calculated values as the inputs for StartDateTime and EndDateTime when creating the Service Appointment.</description>
+            <developerName>instructions_0_1776159046519</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776159046519</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After attempting to create a Service Appointment, always verify the outcome.
+
+If no Service Appointment is created or returned, respond with:
+“We were unable to create an appointment. This time slot is already booked for &apos;doctorname&apos;”
+If the appointment is not created because the selected time slot is already booked or unavailable, respond with:
+“The selected time slot is already booked.”
+Do not confirm or describe a Service Appointment unless a valid appointment record exists.</description>
+            <developerName>instructions_0_1776159367041</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776159367041</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When asked to cancel a service appointment always ask for the appointment number and reason of cancellation.</description>
+            <developerName>instructions_0_1776164356117</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776164356117</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When asked to cancel a service appointment always ask for the appointment number and reason of cancellation.</description>
+            <developerName>instructions_0_1776238375616</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776238375616</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When asked to modify or reschedule a service appointment always ask for the appointment number and Start date and time. Always calculate EndDateTime by adding 1 hour to the StartDateTime.
+Use these calculated values as the inputs for StartDateTime and EndDateTime when creating the Service Appointment.</description>
+            <developerName>instructions_0_1776239126192</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776239126192</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After attempting to modify a Service Appointment, always verify the outcome.
+
+If no Service Appointment is modified or returned, respond with:
+“We were unable to create an appointment. This time slot is already booked. Please select a different time slot.&quot;</description>
+            <developerName>instructions_0_1776326557027</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776326557027</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When Create Service Appointment- New Patient is invoked The last Name will be picked up from Context.Visitor_Name. ask for City.
+After getting the above information then ask for the doctor&apos;s name that the user wants to schedule appointment with 
+Finally ask for Startdate.</description>
+            <developerName>instructions_0_1776417304234</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776417304234</masterLabel>
+            <sortOrder>8</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>The input parameter &quot;startDateTime&quot; DOES NOT needs to be in this format: YYYY-MM-DDThh:mm:ssZ.</description>
+            <developerName>instructions_0_1776418844170</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776418844170</masterLabel>
+            <sortOrder>9</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>You must never ask the user for a date or time in any technical or system-specific format
+(such as ISO 8601 or YYYY-MM-DDTHH:mm:ssZ).
+
+If the user provides a date and/or time in natural language (for example, &quot;16th May at 1 pm&quot;),
+you must interpret it internally, convert it to the required backend datetime format yourself,
+and pass the converted value to the flow.
+
+If the date or time is missing or ambiguous, ask a simple, user-friendly question
+(e.g., &quot;What time would you like the appointment?&quot;) without mentioning formatting rules.
+
+Do not expose backend errors, validation messages, or system requirements to the user.
+If a backend operation fails, respond with a generic, non-technical message and retry or
+request clarification politely.</description>
+            <developerName>instructions_0_1776595699324</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776595699324</masterLabel>
+            <sortOrder>10</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Cancel_Service_Appointment_179ak000002k20r</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Modify_Service_Appointment_179ak000002k20r</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Create_Service_Appointment_Employee_179ak000002k20r</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Cancel_Service_Appointment_179ak000002k20r</fullName>
+            <description>Cancels the service appointment on request</description>
+            <developerName>Cancel_Service_Appointment_179ak000002k20r</developerName>
+            <invocationTarget>Cancel_Service_Appointment</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Cancel_Service_Appointment</localDeveloperName>
+            <masterLabel>Cancel Service Appointment</masterLabel>
+            <progressIndicatorMessage>Cancelling Service Appointment...</progressIndicatorMessage>
+        </localActions>
+        <localActions>
+            <fullName>Create_Service_Appointment_Employee_179ak000002k20r</fullName>
+            <description>Create Service Appointement</description>
+            <developerName>Create_Service_Appointment_Employee_179ak000002k20r</developerName>
+            <invocationTarget>Create_Service_Appointment_Employee</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Service_Appointment_Employee</localDeveloperName>
+            <mappingAttributes>
+                <label>lastName</label>
+                <name>input_lastName</name>
+                <parameterName>lastName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Create Service Appointment - Employee</masterLabel>
+            <progressIndicatorMessage>Creating Service Appointment....</progressIndicatorMessage>
+        </localActions>
+        <localActions>
+            <fullName>Modify_Service_Appointment_179ak000002k20r</fullName>
+            <description>To reschedule or modify a service appointment</description>
+            <developerName>Modify_Service_Appointment_179ak000002k20r</developerName>
+            <invocationTarget>Modify_Service_Appointment</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Modify_Service_Appointment</localDeveloperName>
+            <masterLabel>Modify Service Appointment</masterLabel>
+            <progressIndicatorMessage>Rescheduling Service Appointment...</progressIndicatorMessage>
+        </localActions>
+        <localDeveloperName>Service_Appointment_Management</localDeveloperName>
+        <masterLabel>Service Appointment Management</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Create, update, and delete Service Appointment records based on structured input, validating business rules and handling errors safely.</scope>
+    </localTopics>
+    <localTopics>
+        <fullName>Get_Scheduled_Service_Appointments_16jak000001hc4f</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Get scheduled service appointment for the account</description>
+        <developerName>Get_Scheduled_Service_Appointments_16jak000001hc4f</developerName>
+        <genAiPluginInstructions>
+            <description>When asked to get all the service appointment always make sure to go to Get Scheduled Service Appointment action.</description>
+            <developerName>instruction_1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Get_Scheduled_Service_Appointments_179ak000002qfSX</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Get_Scheduled_Service_Appointments_179ak000002qfSX</fullName>
+            <description>Retrieves Scheduled Service Appointments for an Account</description>
+            <developerName>Get_Scheduled_Service_Appointments_179ak000002qfSX</developerName>
+            <invocationTarget>GetServiceAppointment</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Scheduled_Service_Appointments</localDeveloperName>
+            <mappingAttributes>
+                <label>accountName</label>
+                <name>input_accountName</name>
+                <parameterName>accountName</parameterName>
+                <parameterType>input</parameterType>
+            </mappingAttributes>
+            <masterLabel>Get Scheduled Service Appointments</masterLabel>
+            <progressIndicatorMessage>loading</progressIndicatorMessage>
+        </localActions>
+        <localDeveloperName>Get_Scheduled_Service_Appointments</localDeveloperName>
+        <masterLabel>Get Scheduled Service Appointments</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to get the name of the account and return all the scheduled service appointments</scope>
+    </localTopics>
+    <localTopics>
+        <fullName>Finding_Doctors_16jak000001hc4f</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles user requests related to finding doctors based on department/specialty and location. This includes queries about available doctors, specialists, or medical professionals in a specific city or hospital department.</description>
+        <developerName>Finding_Doctors_16jak000001hc4f</developerName>
+        <genAiPluginInstructions>
+            <description>Identify the department (medical specialty) and location from the user query.
+
+Map the extracted values to:
+- department → medical specialty (e.g., Cardiology, Neurology)
+- location → city or hospital location
+
+If either value is missing, ask the user to provide it before proceeding.</description>
+            <developerName>instruction_0_1776323628092</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_0_1776323628092</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use the doctorFilter Lightning Type to collect or confirm the following inputs:
+- department (required)
+- location (required)
+
+Ensure both values are populated before invoking the action.</description>
+            <developerName>instruction_1_1776323628092</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_1_1776323628092</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Invoke the &quot;Fetch Available Doctors&quot; action using the collected department and location.
+
+Pass the input in the correct structure expected by the system.</description>
+            <developerName>instruction_2_1776323628092</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_2_1776323628092</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Display the list of doctors returned from the action using the doctorResponse Lightning Type.
+
+Each doctor should include:
+- Name
+- Department
+- Location
+- Experience</description>
+            <developerName>instruction_3_1776323628092</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_3_1776323628092</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If no doctors are found for the selected department and location, inform the user politely and suggest trying a different department or location.</description>
+            <developerName>instruction_4_1776323628092</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_4_1776323628092</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After displaying the doctor list, prompt the user to select a doctor to view available appointment slots.
+
+Do not attempt to fetch slots in this topic.</description>
+            <developerName>instruction_5_1776323628092</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_5_1776323628092</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>- Find a cardiologist in Hyderabad
+- Show neurologists in Bangalore
+- I need an orthopedic doctor in Chennai
+- List oncology doctors near me
+- Any heart specialists in Hyderabad?</description>
+            <developerName>instruction_6_1776323628092</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_6_1776323628092</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Search_Doctors_179ak000002mmqn</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Search_Doctors_179ak000002mmqn</fullName>
+            <description>Search Doctors</description>
+            <developerName>Search_Doctors_179ak000002mmqn</developerName>
+            <invocationTarget>DoctorSearch</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Search_Doctors</localDeveloperName>
+            <masterLabel>Search Doctors</masterLabel>
+            <progressIndicatorMessage>Searching Doctors....</progressIndicatorMessage>
+            <source>Search_Doctors</source>
+        </localActions>
+        <localDeveloperName>Finding_Doctors</localDeveloperName>
+        <masterLabel>Finding Doctors</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>You are responsible for:
+- Identifying the medical department or specialty requested by the user (e.g., Cardiology, Neurology, Orthopedics, Oncology).
+- Identifying the preferred location or city.
+- Fetching available doctors matching the criteria.
+- Displaying the list of doctors using a structured UI.
+
+This topic does not handle:
+- Appointment booking
+- Slot availability
+- Patient record management</scope>
+        <source>Finding_Doctors</source>
+    </localTopics>
+    <localTopics>
+        <fullName>GeneralFAQ_16jak000001hc4f</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic MUST be triggered for all user questions that are seeking
+information or explanations and can be answered using Knowledge Articles.
+
+This includes (but is not limited to):
+- Company information
+- Products, services, and facilities
+- Policies and business procedures
+- Support, Convenience, and Continuity Services
+- Treatment Specialties
+- Onco Global Cancer Center
+- General hospital facilities and services
+- Treatment, symptoms, medicine, therapy, or disease-related informational questions
+
+Routing Rules (Non‑negotiable):
+- If the user is ASKING A QUESTION and NOT explicitly requesting a transactional action,
+  this topic MUST be selected.
+- This topic OVERRIDES ambiguity handling.
+- This topic OVERRIDES all other informational agents.
+- Low confidence or ambiguous classification must STILL route to this topic
+  if the question can reasonably be answered by knowledge articles.
+
+This topic must NEVER be bypassed in favor of:
+- Ambiguous_Question
+- Off Topic
+- Inappropriate Content
+- Clarification topics
+- Any other informational agent
+
+Once this topic is triggered:
+- ALWAYS call the action &quot;Answer Questions with Knowledge&quot;
+- The response MUST come from knowledge articles</description>
+        <developerName>GeneralFAQ_16jak000001hc4f</developerName>
+        <genAiPluginInstructions>
+            <description>Informational questions about treatments, services, facilities, or policies
+must never trigger Ambiguous_Question or any other agent.</description>
+            <developerName>avoidgenericinformation</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>avoid-generic-information</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If the user message looks like a question,
+immediately call &quot;Answer Questions with Knowledge&quot;
+and return the result.</description>
+            <developerName>includearticlesources</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>include-article-sources</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If you are unable to answer customer&apos;s questions, ask if they want to escalate this issue to a live agent.</description>
+            <developerName>instructions_0_1775715023516</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1775715023516</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Never provide generic information, advice or troubleshooting steps, unless retrieved from searching knowledge articles.</description>
+            <developerName>instructions_0_1775718103650</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1775718103650</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Include sources in your response when available from the knowledge articles, otherwise proceed without them.</description>
+            <developerName>instructions_0_1775719930554</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1775719930554</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>You are a healthcare assistant for Onco Global.
+Help patients find cancer-related specialties, hospitals, and facilities.
+Always use tools when real-time data is needed.
+Be empathetic and clear.</description>
+            <developerName>instructions_0_1775720095374</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1775720095374</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>You are a healthcare assistant for Onco Global.
+ 
+Answer patient questions related to:
+- Oncology (diagnosis, treatment, support)
+- General hospital services
+- Facilities and care options
+ 
+Guidelines:
+- Use simple, non-technical language
+- Be empathetic and reassuring
+- If unsure, suggest speaking with a specialist
+- Use knowledge articles as the primary source</description>
+            <developerName>instructions_0_1777262498647</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1777262498647</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When answering user questions, use Salesforce Knowledge articles as the primary source.
+
+For each retrieved Knowledge article:
+- Read the article Title to understand the topic.
+- Read the Article_Body__c field as the authoritative content.
+
+Answer the user’s question using ONLY the information found in the Title and Article_Body__c.
+If multiple articles are available, combine relevant information where appropriate.
+
+If the article does not contain sufficient information to answer the question:
+- Clearly say you do not have enough information.
+- Do not make assumptions or generate information not found in the article.
+
+Prefer clear, concise explanations.
+Use step-by-step formatting when the article describes a process or resolution.</description>
+            <developerName>instructions_0_1777263459296</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1777263459296</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Support, Convenience, and Continuity Services, Treatment Specialties, Onco Global Cancer Center – General Facilities and Services. If questions are asked around this then this action should be called and it should go to Answer Questions with Knowledge.</description>
+            <developerName>instructions_1_1775715023524</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_1_1775715023524</masterLabel>
+            <sortOrder>8</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When a user asks about treatments, medicines, symptoms, cures, therapy, or disease management,
+ALWAYS route the request to the General FAQ action unless the user explicitly asks to perform
+another task (appointment booking, eligibility check, workflow execution, or form submission).
+
+General FAQ takes priority over all other actions for informational medical questions.</description>
+            <developerName>instructions_1_1777263459302</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_1_1777263459302</masterLabel>
+            <sortOrder>9</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Do NOT route informational questions about treatment or general health knowledge
+to non-FAQ actions or experimental flows.</description>
+            <developerName>instructions_2_1777263459302</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_2_1777263459302</masterLabel>
+            <sortOrder>10</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>User: What are general hospital services
+Assistant: Route to General FAQ and return treatment information.</description>
+            <developerName>requestmoredetails</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>request-more-details</masterLabel>
+            <sortOrder>11</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179ak000002hpZB</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179ak000002hpZB</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179ak000002hpZB</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localDeveloperName>GeneralFAQ</localDeveloperName>
+        <masterLabel>General FAQ</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is solely to help with issues and answer questions about the company, its products, procedures, or policies by searching knowledge articles. Support, Convenience, and Continuity Services, Treatment Specialties, Onco Global Cancer Center – General Facilities and Services. If questions are asked around this then this action should be called and it should go to Answer Questions with Knowledge.</scope>
+        <source>SvcCopilotTmpl__GeneralFAQ</source>
+    </localTopics>
+    <masterLabel>Onco Assist</masterLabel>
+    <plannerActions>
+        <fullName>AnswerQuestionsWithKnowledge_16jak000001hc4f</fullName>
+        <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+        <developerName>AnswerQuestionsWithKnowledge_16jak000001hc4f</developerName>
+        <invocationTarget>streamKnowledgeSearch</invocationTarget>
+        <invocationTargetType>standardInvocableAction</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+        <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+        <masterLabel>Answer Questions with Knowledge</masterLabel>
+        <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+        <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+    </plannerActions>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__CustomerWebClient</surface>
+        <surfaceType>CustomerWebClient</surfaceType>
+    </plannerSurfaces>
+    <plannerType>AiCopilot__ReAct</plannerType>
+    <ruleExpressions>
+        <conditions>
+            <leftOperand>EndUserContactId</leftOperand>
+            <leftOperandType>ContextVariable</leftOperandType>
+            <operator>isNotEmpty</operator>
+        </conditions>
+        <expressionLabel>Contact Needed</expressionLabel>
+        <expressionName>Contact_Needed</expressionName>
+        <expressionType>sel</expressionType>
+    </ruleExpressions>
+    <ruleExpressions>
+        <conditions>
+            <leftOperand>isVerified</leftOperand>
+            <leftOperandType>Variable</leftOperandType>
+            <operator>equal</operator>
+            <rightOperandValue>true</rightOperandValue>
+        </conditions>
+        <expression>Verified_User</expression>
+        <expressionLabel>Verified User</expressionLabel>
+        <expressionName>Verified_User</expressionName>
+        <expressionType>sel</expressionType>
+    </ruleExpressions>
+</GenAiPlannerBundle>

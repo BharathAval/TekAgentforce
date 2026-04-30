@@ -1,0 +1,86 @@
+{
+  "appPageId" : "d3c4743b-d12a-4a4d-a985-41fa6052723b",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "8804c148-2343-416b-bb43-d72ca52c9a19",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "clientVersion" : "WebV1",
+        "deploymentName" : "Messaging_Channel",
+        "hideChatButtonOnLoad" : "Visible",
+        "isExpSiteAuthMode" : false,
+        "scrtUrl" : "https://orgfarm-5296dd18da.my.salesforce-scrt.com",
+        "siteEndpoint" : "https://orgfarm-5296dd18da.my.site.com/ESWMessagingChannel1775811878544"
+      },
+      "componentName" : "experience_messaging:embeddedMessaging",
+      "id" : "b1e4a08d-988d-47ab-b7ee-8eab8b4bc43e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6b0e7196-7f85-4dcd-bb96-1abec24eb09e",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "1c321271-7c47-44e7-a7ba-76d176ee0e92",
+    "regionName" : "featured",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "defaultSortOrderCompactFeed" : "Relevance",
+        "defaultSortOrderFullFeed" : "Relevance",
+        "discussionTabLabel" : "Discussions",
+        "featuredTabLabel" : "Featured",
+        "maxWidth" : 100,
+        "myFeedTabLabel" : "My Feed",
+        "overlayColor" : "rgba(0,0,0,0.6)",
+        "overlayHoverColor" : "",
+        "radius" : 0,
+        "showCompactFeedInDiscussion" : true,
+        "textAlignment" : "center",
+        "textBgColor" : "rgba(0,0,0,0)",
+        "textBgHoverColor" : "rgba(0,0,0,0)",
+        "textColor" : "",
+        "textHoverColor" : "",
+        "textPosition" : "center center"
+      },
+      "componentName" : "forceCommunity:homeTabs",
+      "id" : "4f3ca8b9-83ad-4eb9-a98e-02563a664391",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8bd86d6e-901f-484b-b15d-c777a3540b26",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "be3080c2-f872-40bb-995f-e6e48c0c18d2",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "f124218c-a06a-4d5d-a909-591d89e4b448",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "04c37751-0601-46de-ad0d-7eb9b27056e0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b16c6d05-dda4-4a35-8a4f-18cc225a001e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

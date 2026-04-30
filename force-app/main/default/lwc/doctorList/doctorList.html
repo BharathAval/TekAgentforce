@@ -1,0 +1,51 @@
+<template>
+<template if:true={value}>
+        <div class="container">
+
+            <template for:each={value} for:item="doc">
+                <div key={doc.doctorId} class="card">
+
+                    <!-- Header -->
+                    <div class="card-header">
+                        <!--<div class="avatar">
+                            {doc.initial}
+                        </div>-->
+
+                        <div class="doctor-info">
+                            <h2 class="doctor-name">{doc.name}</h2>
+                            <p class="department">{doc.department}</p>
+                        </div>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="card-body">
+                        <p class="info">
+                            📍 {doc.location}
+                        </p>
+                        <p class="info">
+                            🩺 {doc.experience} years experience
+                        </p>
+                    </div>
+
+                    <!-- Footer -->
+                    <!--<div class="card-footer">
+                        <lightning-button 
+                            label="View Slots"
+                            variant="brand"
+                            data-id={doc.doctorId}
+                            onclick={handleSelect}>
+                        </lightning-button>
+                    </div>-->
+
+                </div>
+            </template>
+
+        </div>
+    </template>
+
+    <template if:false={value}>
+        <div class="empty-state">
+            No doctors found
+        </div>
+    </template>
+</template>

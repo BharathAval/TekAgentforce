@@ -1,0 +1,15 @@
+{
+  "required" : [ "filters" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "filters" : {
+      "title" : "filters",
+      "description" : "Request Input from the user for the department and Location.",
+      "lightning:type" : "c__DoctorInput",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

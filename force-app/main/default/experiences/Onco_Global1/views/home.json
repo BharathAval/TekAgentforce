@@ -1,0 +1,65 @@
+{
+  "appPageId" : "6b9ce44c-0338-437e-b61c-5ff6efc78351",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "2bc467a3-dfaa-41fd-9408-e6009756629c",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<div class=\"tiles-container\">\n  <div class=\"tile big\">\n    15+ Years of Oncology Experience\n  </div>\n\n  <div class=\"tile small\">\n    Treating cancer while protecting function, dignity & life after treatment\n  </div>\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "7a9700da-22bb-4ead-8728-da189390bfc7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div class=\"treatment-section\">\n\n    <h2 class=\"treatment-heading\">\n        Treatments led by Oncology expertise\n    </h2>\n\n    <div class=\"treatment-container\">\n\n       <div class=\"treatment-card\">\n    <img src=\"/sfsites/c/resource/cancerSurgeryIcon\" class=\"treatment-icon\" />\n    <h3>Cancer Surgery</h3>\n    <p class=\"sub-text\">Precision surgeries with faster recovery</p>\n    <div class=\"underline\"></div>\n</div>\n\n<div class=\"treatment-card\">\n    <img src=\"/sfsites/c/resource/chemoIcon\" class=\"treatment-icon\" />\n    <h3>Chemotherapy</h3>\n    <p class=\"sub-text\">Targeted treatment with personalized care</p>\n    <div class=\"underline\"></div>\n</div>\n\n<div class=\"treatment-card\">\n    <img src=\"/sfsites/c/resource/immunoIcon\" class=\"treatment-icon\" />\n    <h3>Immunotherapy</h3>\n    <p class=\"sub-text\">Empowering your immune system to fight cancer</p>\n    <div class=\"underline\"></div>\n</div>\n\n    </div>\n\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "c5ee6510-5835-4c82-b387-d89d0db4127e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f1cb7346-2840-406b-bd0d-1d954e0b65f8",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "7bdba597-ef51-44cf-a10b-e0c781e57319",
+    "regionName" : "featured",
+    "type" : "region"
+  }, {
+    "id" : "f968ac5e-c135-4061-8b67-acdcb9d6df3c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "e83f7196-971e-4119-8cee-e027574d6c58",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "e7c7a10c-d071-4263-b20a-dc0fdca1e2e5",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "cd7d1be1-d85d-4960-a8fa-889198ec748e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "568434f5-51b6-452b-8f11-c61b17196922",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>fQF0/nw3XpFnL9BJsNfsfcY07OmW/M2KGvM9589rFYE=_2</activeVersionIdentifier>
+    <developerName>Account_file_attachment</developerName>
+    <masterLabel>Account_file_attachment</masterLabel>
+    <overridable>false</overridable>
+    <templateVersions>
+        <content>     ### INSTRUCTIONS
+      1. Analyze the query: Carefully read and understand the user&apos;s question or issue from the QUESTION section.
+      2. Search for Opportunity retriever: Review the provided question in opportunity retriever to find relevant information.
+      3. Evaluate information: Determine if the available information in the opportunity retriever section is sufficient to answer the QUESTION.
+      4. Formulate response: To generate a reply &lt;generated_response&gt; to the user, you must follow these rules
+      a. Find the article-chunk(s) that is most relevant to answer the user query and VERBATIM extract the ID of the article to set &lt;source_id&gt; field in the response JSON. If you are unable to find the relevant article, set &lt;source_id&gt; to NONE.
+       b. parse through the article-chuck(s) for user query for any matching word(s) using fuzzy logic (example if user asks question with work KPI, search for any text which contains the word), it can be title, subtitle or embedded inside a paragraph, retrieve and respond
+      c. Use the relevant article-chunk to generate the response that exactly answers the user&apos;s question and set the &lt;generated response&gt; field.
+      d. If the user request cannot be answered by the case information provided, set the &lt;source_id&gt; to NONE and &lt;generated_response&gt; to &quot;Sorry, I can&apos;t find an answer based on the available articles.&quot;
+      5. Refine and deliver: Ensure your response is polite, professional, and concise.
+      6. Review response: Make sure that have followed all of the above instructions, respond in the desired output format and you only strictly stick to the provided opportunity only to formulate your answer.
+   
+ ###
+      Account: {!$EinsteinSearch:Account_Retriever_1Cx_mCR2be7e013.results}
+
+       
+      ###
+      QUESTION:
+      {!$Input:UserQuery}
+       
+       
+      ###
+      Response: 
+</content>
+        <fileDroppingStrategy>{&quot;dropFilesBy&quot;:&quot;LAST_MODIFIED_DATE&quot;,&quot;dropFileStartingWith&quot;:&quot;OLDEST&quot;}</fileDroppingStrategy>
+        <inputs>
+            <apiName>UserQuery</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>UserQuery</masterLabel>
+            <referenceName>Input:UserQuery</referenceName>
+            <required>true</required>
+        </inputs>
+        <isCitationEnabled>false</isCitationEnabled>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Account_Retriever_1Cx_mCR2be7e013</definition>
+            <label>Account Retriever</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:UserQuery}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Account_Retriever_1Cx_mCR2be7e013</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>fQF0/nw3XpFnL9BJsNfsfcY07OmW/M2KGvM9589rFYE=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>     ### INSTRUCTIONS
+      1. Analyze the query: Carefully read and understand the user&apos;s question or issue from the QUESTION section.
+      2. Search for Opportunity retriever: Review the provided question in opportunity retriever to find relevant information.
+      3. Evaluate information: Determine if the available information in the opportunity retriever section is sufficient to answer the QUESTION.
+      4. Formulate response: To generate a reply &lt;generated_response&gt; to the user, you must follow these rules
+      a. Find the article-chunk(s) that is most relevant to answer the user query and VERBATIM extract the ID of the article to set &lt;source_id&gt; field in the response JSON. If you are unable to find the relevant article, set &lt;source_id&gt; to NONE.
+       b. parse through the article-chuck(s) for user query for any matching word(s) using fuzzy logic (example if user asks question with work KPI, search for any text which contains the word), it can be title, subtitle or embedded inside a paragraph, retrieve and respond
+      c. Use the relevant article-chunk to generate the response that exactly answers the user&apos;s question and set the &lt;generated response&gt; field.
+      d. If the user request cannot be answered by the case information provided, set the &lt;source_id&gt; to NONE and &lt;generated_response&gt; to &quot;Sorry, I can&apos;t find an answer based on the available articles.&quot;
+      5. Refine and deliver: Ensure your response is polite, professional, and concise.
+      6. Review response: Make sure that have followed all of the above instructions, respond in the desired output format and you only strictly stick to the provided opportunity only to formulate your answer.
+   
+ ###
+      Account: {!$EinsteinSearch:Account_Retriever_1Cx_mCR2be7e013.results}
+
+       
+      ###
+      QUESTION:
+      {!$Input:UserQuery}
+       
+       
+      ###
+      Response: 
+</content>
+        <fileDroppingStrategy>{&quot;dropFilesBy&quot;:&quot;LAST_MODIFIED_DATE&quot;,&quot;dropFileStartingWith&quot;:&quot;OLDEST&quot;}</fileDroppingStrategy>
+        <inputs>
+            <apiName>UserQuery</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>UserQuery</masterLabel>
+            <referenceName>Input:UserQuery</referenceName>
+            <required>true</required>
+        </inputs>
+        <isCitationEnabled>true</isCitationEnabled>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <responseFormat>HTML</responseFormat>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Account_Retriever_1Cx_mCR2be7e013</definition>
+            <label>Account Retriever</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:UserQuery}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Account_Retriever_1Cx_mCR2be7e013</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>fQF0/nw3XpFnL9BJsNfsfcY07OmW/M2KGvM9589rFYE=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

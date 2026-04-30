@@ -1,0 +1,15 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "doctorJSONList" : {
+      "title" : "doctorJSONList",
+      "description" : "- Only assist in finding and displaying doctor information\n- Display doctors list in the form of card seperating each doctor details.\n- Do not provide medical advice, diagnosis, or treatment recommendations\n- Limit results to top 5–10 relevant doctors\n- Always present doctor details including Name, Department, Experience, and Location\n- Ensure the response is well-structured and easy to read (card-style format)\n- Use relevant emojis to improve readability (e.g., 👨‍⚕️, 📍, ⭐)\n- If no matching doctors are found, respond gracefully and suggest alternative options",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

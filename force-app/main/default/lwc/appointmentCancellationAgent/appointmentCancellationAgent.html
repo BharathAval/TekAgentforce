@@ -1,0 +1,30 @@
+<template>
+    <div class="container">
+
+        <div class="header">
+            <h2>Hello,</h2>
+            <p>Select appointment(s) to cancel.</p>
+        </div>
+
+        <template if:true={hasAppointments}>
+            <c-appointment-list appointments={appointments} multi-select="true" onselectionchange={handleSelection}>
+            </c-appointment-list>
+
+            <div class="input-section">
+                <lightning-textarea label="Cancellation Reason" value={reason} onchange={handleReasonChange}>
+                </lightning-textarea>
+            </div>
+
+            <div class="actions">
+                <lightning-button label="Submit Cancellation" variant="brand" onclick={handleSubmit}
+                    disabled={isSubmitDisabled}>
+                </lightning-button>
+            </div>
+        </template>
+
+        <template if:false={hasAppointments}>
+            <p>No active appointments found.</p>
+        </template>
+
+    </div>
+</template>

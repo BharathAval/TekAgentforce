@@ -1,0 +1,181 @@
+{
+  "activeBrandingSetId" : "1a80280c-a1ea-4490-97a1-b27bd2147a4f",
+  "customCSS" : "/* ===== GLOBAL STYLES ===== */\nbody {\n    font-family: \"Salesforce Sans\", Arial, sans-serif;\n    color: #181818;\n    background-color: #FFFFFF;\n    font-size: 16px;\n}\n\n/* ===== HEADINGS ===== */\nh1, h2, h3 {\n    font-weight: 600;\n    color: #032D60;\n}\n\nh1 { font-size: 46px; }\nh2 { font-size: 28px; }\nh3 { font-size: 20px; }\n\n/* ===== BUTTONS ===== */\n.slds-button {\n    border-radius: 6px !important;\n    padding: 10px 20px !important;\n    font-weight: 500;\n}\n\n.slds-button_brand {\n    background-color: #0176D3 !important;\n    border-color: #0176D3 !important;\n}\n\n.slds-button_brand:hover {\n    background-color: #014486 !important;\n}\n\n/* ===== CARD STYLE ===== */\n.custom-card {\n    border-radius: 12px;\n    padding: 20px;\n    background: #FFFFFF;\n    border: 1px solid #E5E5E5;\n    box-shadow: 0 2px 6px rgba(0,0,0,0.05);\n    transition: all 0.2s ease;\n}\n\n.custom-card:hover {\n    box-shadow: 0 4px 12px rgba(1, 118, 211, 0.15);\n    transform: translateY(-3px);\n}\n\n/* ===== DEPARTMENT COLORS ===== */\n.oncology { border-left: 4px solid #0176D3; }\n.gynecology { border-left: 4px solid #BA0517; }\n.pediatrics { border-left: 4px solid #2E844A; }\n\n/* ===== SECTION SPACING ===== */\n.section-padding {\n    padding: 50px 20px;\n}\n\n/* ===== HERO SECTION ===== */\n.hero {\n    background: linear-gradient(to right, #0176D3, #032D60);\n    color: white;\n    padding: 80px 20px;\n}\n\n.hero h1 {\n    color: white;\n}\n\n.hero-container {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    max-width: 1100px;\n    margin: auto;\n    gap: 40px;\n}\n\n/* ===== TEXT SIDE ===== */\n.hero-text {\n    flex: 1;\n    font-size: 18px;\n}\n\n.hero-text h1 {\n    font-size: 42px;\n    line-height: 1.3;\n    margin-top: 10px;\n}\n\n.title {\n    font-size: 18px;\n    opacity: 0.9;\n}\n\n.highlight {\n    color: #FFFFFF;\n    font-weight: 700;\n}\n\n/* ===== IMAGE SIDE ===== */\n.hero-image {\n    flex: 1;\n    text-align: right;\n    position: relative; /* 🔥 IMPORTANT for overlay */\n}\n\n.hero-image img {\n    max-width: 300px;\n    border-radius: 12px;\n    position: relative;\n    z-index: 1;\n}\n\n/* ===== ⭐ REVIEW OVER IMAGE (UPDATED) ===== */\n.review-card {\n    position: absolute;\n    bottom: 20px;\n    left: -60px; /* overlap towards text */\n\n    background: rgba(255, 255, 255, 0.95);\n    color: #032D60;\n\n    padding: 15px 18px;\n    border-radius: 10px;\n    width: 260px;\n\n    box-shadow: 0 8px 20px rgba(0,0,0,0.15);\n    backdrop-filter: blur(6px);\n\n    z-index: 2;\n}\n\n.review-text {\n    font-size: 14px;\n    font-style: italic;\n    margin-bottom: 8px;\n}\n\n.review-user {\n    font-size: 13px;\n    font-weight: 500;\n    opacity: 0.9;\n}\n\n/* ===== NAVBAR ===== */\nheader {\n    background: #FFFFFF;\n    border-bottom: 1px solid #E5E5E5;\n}\n\n/* ===== TILES ===== */\n.tiles-container {\n    display: flex;\n    gap: 20px;\n    flex-wrap: wrap;\n    max-width: 1100px;\n    margin: 40px auto;\n}\n\n.tile {\n    flex: 1;\n    background: #F3F9FF;\n    padding: 20px;\n    border-radius: 12px;\n    border: 1px solid #E5E5E5;\n    min-height: 120px;\n    display: flex;\n    align-items: center;\n    transition: all 0.2s ease;\n}\n\n.tile.big {\n    border-left: 4px solid #0176D3;\n}\n\n.big {\n    font-size: 22px;\n    font-weight: 600;\n    color: #032D60;\n}\n\n.small {\n    font-size: 16px;\n    color: #181818;\n}\n\n.tile:hover {\n    box-shadow: 0 4px 12px rgba(1, 118, 211, 0.15);\n}\n\n/* ===== TREATMENT SECTION ===== */\n.treatment-section {\n    text-align: center;\n    margin: 60px auto;\n    max-width: 1100px;\n}\n\n.treatment-heading {\n    font-size: 26px;\n    font-weight: 600;\n    color: #032D60;\n    margin-bottom: 35px;\n}\n\n.treatment-container {\n    display: flex;\n    justify-content: center;\n    gap: 20px;\n    flex-wrap: wrap;\n}\n\n.treatment-card {\n    background: #F3F9FF;\n    padding: 25px 20px;\n    border-radius: 14px;\n    width: 240px;\n    text-align: center;\n    border: 1px solid #E5E5E5;\n    transition: all 0.25s ease;\n}\n\n/* ===== ICON ===== */\n.treatment-icon {\n    width: 60px;\n    height: 60px;\n    margin-bottom: 15px;\n    padding: 12px;\n    background: #0176D3;\n    border-radius: 50%;\n    object-fit: contain;\n}\n\n.treatment-card h3 {\n    font-size: 18px;\n    margin-bottom: 8px;\n}\n\n.sub-text {\n    font-size: 14px;\n    color: #5F6A7D;\n    margin-bottom: 12px;\n}\n\n.underline {\n    width: 40px;\n    height: 2px;\n    background: #0176D3;\n    margin: auto;\n    border-radius: 5px;\n}\n\n.treatment-card:hover {\n    box-shadow: 0 6px 16px rgba(1, 118, 211, 0.2);\n    transform: translateY(-5px);\n}\n\n.treatment-card:hover .treatment-icon {\n    transform: scale(1.1);\n    transition: 0.3s ease;\n}\n\n/* ===== MOBILE ===== */\n@media (max-width: 768px) {\n    .tiles-container {\n        flex-direction: column;\n        padding: 0 15px;\n    }\n\n    .hero-container {\n        flex-direction: column;\n        text-align: center;\n    }\n\n    .hero-image {\n        margin-top: 20px;\n        text-align: center;\n    }\n\n    /* center review on mobile */\n    .review-card {\n        position: static;\n        margin-top: 15px;\n        width: auto;\n    }\n\n    .treatment-container {\n        flex-direction: column;\n        align-items: center;\n    }\n}",
+  "developerName" : "service",
+  "id" : "eef11e13-1ec5-46a5-aa14-4a0a79fdd6b1",
+  "label" : "Customer Service",
+  "layouts" : {
+    "Inner" : "a01083fe-a956-4de0-9987-af92cc3d8fd0",
+    "Login" : "424fd539-0d8c-4a60-a8ed-0f8ad9f3b2b7",
+    "ServiceNotAvailable" : "e50b1105-90c1-4190-936a-0b1b60b44561"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "salesforceIdentity:loginBody2",
+    "id" : "424fd539-0d8c-4a60-a8ed-0f8ad9f3b2b7",
+    "label" : "Login",
+    "regions" : [ {
+      "id" : "8c80929d-ffd4-4d90-bf99-26a34d321fab",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "5ca2acdb-aaaf-4cf4-bb12-6015ccbb0b3a",
+      "regionName" : "content",
+      "type" : "region"
+    }, {
+      "id" : "89344e4e-86bf-48f8-b55b-d275f61ea1c3",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "IsDefaultHeaderHidden" : false,
+      "IsDefaultNotificationsHidden" : false,
+      "fixedPageWidth" : 1140,
+      "isPageWidthFixed" : true
+    },
+    "componentName" : "siteforce:serviceBody",
+    "id" : "a01083fe-a956-4de0-9987-af92cc3d8fd0",
+    "label" : "Default",
+    "regions" : [ {
+      "id" : "20f885f5-0b07-43ba-8db2-10bae2bb6aa7",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contineActionLabel" : "Ask the community",
+          "continueLabel" : "Don’t see it?",
+          "crossObjectTypeaheadApiNames" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : true,
+            "name" : "FeedItem"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "CollaborationGroup"
+          } ],
+          "disableCrossObjectRelevance" : false,
+          "enableAutocomplete" : true,
+          "maxNumberOfResults" : 6,
+          "placeholder" : "Search...",
+          "questionResultsFirst" : false,
+          "showContinueAction" : true,
+          "showDetails" : false,
+          "showTopics" : true,
+          "signInActionLabel" : "Sign in to ask the community"
+        },
+        "componentName" : "forceCommunity:searchBox",
+        "id" : "95ea2e34-dd6e-4012-b20b-dffe983d2a2c",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "c6a44402-c704-4d00-9c99-190b797f9b82",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "7dd66cee-ef58-413c-8fb8-997214da8101",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "90d7824f-5a91-4230-80c3-d7b8a83b01f4",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "Default_Navigation",
+          "hideAppLauncher" : true,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "bb0563aa-f65d-47a0-8ca5-5d7fa2674567",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "ef705822-3345-4070-9695-1f3d5368c9b4",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<div class=\"hero\">\n    <div class=\"hero-container\">\n\n        <!-- LEFT CONTENT -->\n        <div class=\"hero-text\">\n            <div class=\"title\">Onco Global</div>\n\n            <h1>\n                We help you <span class=\"highlight\">win over</span><br>\n                <span class=\"highlight\">cancer</span>\n            </h1>\n        </div>\n\n        <!-- RIGHT IMAGE + REVIEW -->\n        <div class=\"hero-image\">\n            <img src=\"/sfsites/c/resource/doctorImage\" alt=\"Doctor\">\n\n            <!-- ⭐ Patient Review (attached to image) -->\n            <div class=\"review-card\">\n                <p class=\"review-text\">\n                    “Thanks to Onco Global, my treatment journey was smooth and hopeful.”\n                </p>\n                <div class=\"review-user\">\n                    ⭐⭐⭐⭐⭐ <span>- Priya R., Cancer Survivor</span>\n                </div>\n            </div>\n        </div>\n\n    </div>\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "d28803dd-2bf1-4524-843f-5290f36e874d",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "6b05dbf6-2cd4-4397-a5f7-654d09563b08",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "clientVersion" : "WebV1",
+          "deploymentName" : "Chat_Service",
+          "hideChatButtonOnLoad" : "Visible",
+          "isExpSiteAuthMode" : false,
+          "scrtUrl" : "https://orgfarm-5296dd18da.my.salesforce-scrt.com",
+          "siteEndpoint" : "https://orgfarm-5296dd18da.my.site.com/ESWChatService1775812117549"
+        },
+        "componentName" : "experience_messaging:embeddedMessaging",
+        "id" : "03228a51-a220-4772-9025-1e555856b4e9",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "a392c988-b0b5-4fa7-8bde-d762d5855508",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "e50b1105-90c1-4190-936a-0b1b60b44561",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "3cbdf9b1-9e0e-4e7a-8602-0a7c292326b0",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "562e5f9e-eb70-4c8a-bc0c-54ea0c637f6c",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

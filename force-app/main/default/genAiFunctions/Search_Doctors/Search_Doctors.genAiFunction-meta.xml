@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Search Doctors</description>
+    <developerName>Search_Doctors</developerName>
+    <invocationTarget>DoctorSearch</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Search_Doctors</localDeveloperName>
+    <masterLabel>Search Doctors</masterLabel>
+    <progressIndicatorMessage>Searching Doctors....</progressIndicatorMessage>
+</GenAiFunction>

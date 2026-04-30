@@ -1,0 +1,28 @@
+{
+  "required" : [ "appointmentNumber", "endDateTime", "startDateTime" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "appointmentNumber" : {
+      "title" : "appointmentNumber",
+      "description" : "appointment number",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "endDateTime" : {
+      "title" : "endDateTime",
+      "description" : "end date",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "startDateTime" : {
+      "title" : "startDateTime",
+      "description" : "start date",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

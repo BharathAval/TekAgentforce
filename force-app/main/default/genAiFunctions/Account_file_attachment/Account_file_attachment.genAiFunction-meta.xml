@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This task will execute and call the prompt template to retrieve data from Account file attachments</description>
+    <developerName>Account_file_attachment</developerName>
+    <invocationTarget>Account_file_attachment</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Account_file_attachment</localDeveloperName>
+    <masterLabel>Account_file_attachment</masterLabel>
+    <progressIndicatorMessage>Loading soon from Account attachment documents......</progressIndicatorMessage>
+</GenAiFunction>

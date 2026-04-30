@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:UserQuery" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:UserQuery" : {
+      "title" : "UserQuery",
+      "description" : "End user question will be passed to check Account record attachment",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

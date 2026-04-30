@@ -1,0 +1,36 @@
+<template>
+    <div class="container">
+
+       
+
+        <template if:true={computedAppointments.length}>
+            <template for:each={computedAppointments} for:item="appt">
+                <div key={appt.Id}
+                     class={appt.cardClass}
+                     data-id={appt.Id}
+                     onclick={handleSelect}>
+
+                    <!-- Header -->
+                    <div class="header">
+                        <div class="title">{appt.AppointmentNumber}</div>
+                        <div class="status">{appt.Status}</div>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="body">
+                        <p class="datetime">{appt.SchedStartTime}</p>
+                        <p class="datetime">{appt.SchedEndTime}</p>
+                    </div>
+
+                </div>
+            </template>
+        </template>
+
+        <template if:false={computedAppointments.length}>
+            <div class="empty">
+                No appointments available
+            </div>
+        </template>
+
+    </div>
+</template>

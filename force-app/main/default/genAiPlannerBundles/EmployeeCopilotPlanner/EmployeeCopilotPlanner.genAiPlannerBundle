@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Planner for ReAct-based Employee copilot.</description>
+    <localActionLinks>
+        <genAiFunctionName>AnswerQuestionsWithKnowledge_16jak000001jxMj</genAiFunctionName>
+    </localActionLinks>
+    <localTopicLinks>
+        <genAiPluginName>Account_Attachment_16jak000001jxMj</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>OOTBSingleRecordSummary_16jak000001jxMj</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Service_Appointment_Management_16jak000001jxMj</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>Service_Appointment_Management_16jak000001jxMj</fullName>
+        <aiPluginUtterances>
+            <developerName>utterance_0_1776256716883</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>utterance_0_1776256716883</masterLabel>
+            <utterance>Schedule a Service Appointment</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>utterance_1_1776256716883</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>utterance_1_1776256716883</masterLabel>
+            <utterance>Cancel a Service Appointment</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>utterance_2_1776256716883</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>utterance_2_1776256716883</masterLabel>
+            <utterance>Reschedule a Service Appointment</utterance>
+        </aiPluginUtterances>
+        <canEscalate>false</canEscalate>
+        <description>Service Appointment management by internal users (CSRs)</description>
+        <developerName>Service_Appointment_Management_16jak000001jxMj</developerName>
+        <genAiPluginInstructions>
+            <description>After asking for the doctor’s name, always ask the user for the start date and time of the appointment.
+Use the provided value as StartDateTime.
+Always calculate EndDateTime by adding 1 hour to the StartDateTime.
+Use these calculated values as the inputs for StartDateTime and EndDateTime when creating the Service Appointment.</description>
+            <developerName>instructions_0_1776256900874</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776256900874</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After attempting to create a Service Appointment, always verify the outcome.
+
+If no Service Appointment is created or returned, respond with:
+“We were unable to create an appointment. This time slot is already booked for &apos;doctorname&apos;”
+If the appointment is not created because the selected time slot is already booked or unavailable, respond with:
+“The selected time slot is already booked.”
+Do not confirm or describe a Service Appointment unless a valid appointment record exists.</description>
+            <developerName>instructions_1_1776256900874</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_1_1776256900874</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When asked to cancel a service appointment always ask for the appointment number and reason of cancellation.</description>
+            <developerName>instructions_2_1776256900874</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_2_1776256900874</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When asked to cancel a service appointment always ask for the appointment number and reason of cancellation.</description>
+            <developerName>instructions_3_1776256900874</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_3_1776256900874</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When asked to modify or reschedule a service appointment always ask for the appointment number and Start date and time. Always calculate EndDateTime by adding 1 hour to the StartDateTime.
+Use these calculated values as the inputs for StartDateTime and EndDateTime when creating the Service Appointment.</description>
+            <developerName>instructions_4_1776256900874</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_4_1776256900874</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>After attempting to modify a Service Appointment, always verify the outcome.
+
+If no Service Appointment is modified or returned, respond with:
+“We were unable to create an appointment. This time slot is already booked. Please select a different time slot.&quot;</description>
+            <developerName>instructions_5_1776256900874</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_5_1776256900874</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Create, update, and delete Service Appointment records based on structured input, validating business rules and handling errors safely.</description>
+            <developerName>instructions_6_1776256900874</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_6_1776256900874</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>When asked to create a service appointment go to Create Service Appointment action</description>
+            <developerName>instructions_7_1776256900874</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_7_1776256900874</masterLabel>
+            <sortOrder>7</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Cancel_Service_Appointment_179ak000002mLPC</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Modify_Service_Appointment_179ak000002mLPC</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Create_Service_Appointment_179ak000002mLPC</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Create_Service_Appointment_179ak000002mLPC</fullName>
+            <description>Create Service Appointment</description>
+            <developerName>Create_Service_Appointment_179ak000002mLPC</developerName>
+            <invocationTarget>Create_Service_Appointment</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Service_Appointment</localDeveloperName>
+            <masterLabel>Create Service Appointment</masterLabel>
+            <progressIndicatorMessage>Creating Service Appointment...</progressIndicatorMessage>
+        </localActions>
+        <localActions>
+            <fullName>Cancel_Service_Appointment_179ak000002mLPC</fullName>
+            <description>Cancel Service Appointment</description>
+            <developerName>Cancel_Service_Appointment_179ak000002mLPC</developerName>
+            <invocationTarget>Cancel_Service_Appointment</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Cancel_Service_Appointment</localDeveloperName>
+            <masterLabel>Cancel Service Appointment</masterLabel>
+            <progressIndicatorMessage>Cancelling Service Appointment...</progressIndicatorMessage>
+        </localActions>
+        <localActions>
+            <fullName>Modify_Service_Appointment_179ak000002mLPC</fullName>
+            <description>Modify or Reschedule service appointment when asked to</description>
+            <developerName>Modify_Service_Appointment_179ak000002mLPC</developerName>
+            <invocationTarget>Modify_Service_Appointment</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Modify_Service_Appointment</localDeveloperName>
+            <masterLabel>Modify Service Appointment</masterLabel>
+            <progressIndicatorMessage>Rescheduling Service Appointment...</progressIndicatorMessage>
+        </localActions>
+        <localDeveloperName>Service_Appointment_Management</localDeveloperName>
+        <masterLabel>Service Appointment Management</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to only create, modify, reschdule and cancel Service Appointments</scope>
+    </localTopics>
+    <localTopics>
+        <fullName>OOTBSingleRecordSummary_16jak000001jxMj</fullName>
+        <aiPluginUtterances>
+            <developerName>utterance1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>utterance1</masterLabel>
+            <utterance>Give me a quick summary of this record.</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>utterance2</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>utterance2</masterLabel>
+            <utterance>Provide an overview of this record.</utterance>
+        </aiPluginUtterances>
+        <aiPluginUtterances>
+            <developerName>utterance3</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>utterance3</masterLabel>
+            <utterance>Share highlights for this record.</utterance>
+        </aiPluginUtterances>
+        <canEscalate>false</canEscalate>
+        <description>This topic is to help the user generate an out of the box summary for a SINGLE record. Use this topic when the user is requesting to summarize a single record without any additional instructions or specific filtering instructions.</description>
+        <developerName>OOTBSingleRecordSummary_16jak000001jxMj</developerName>
+        <genAiPluginInstructions>
+            <description>Always try to ask clarifying questions when trying to resolve the record</description>
+            <developerName>Instruction1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>IdentifyRecordByName_179ak000002mLPB</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>QueryRecordsWithAggregate_179ak000002mLPB</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>IdentifyObjectByName_179ak000002mLPB</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>SummarizeRecord_179ak000002mLPB</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>QueryRecords_179ak000002mLPB</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>IdentifyRecordByName_179ak000002mLPB</fullName>
+            <description>Searches for Salesforce CRM records by name and returns a list of matching Salesforce CRM record IDs.</description>
+            <developerName>IdentifyRecordByName_179ak000002mLPB</developerName>
+            <invocationTarget>identifyRecordByName</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>IdentifyRecordByName</localDeveloperName>
+            <masterLabel>Identify Record by Name</masterLabel>
+            <source>EmployeeCopilot__IdentifyRecordByName</source>
+        </localActions>
+        <localActions>
+            <fullName>QueryRecordsWithAggregate_179ak000002mLPB</fullName>
+            <description>Answers aggregation questions (such as count, sum, max, min, or average) about Salesforce CRM data based on the user input and specific conditions, such as field values. For example &apos;Find the number of open opportunities created in the last 5 days.&apos;</description>
+            <developerName>QueryRecordsWithAggregate_179ak000002mLPB</developerName>
+            <invocationTarget>queryRecordsWithAggregate</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>QueryRecordsWithAggregate</localDeveloperName>
+            <masterLabel>Query Records with Aggregate</masterLabel>
+            <source>EmployeeCopilot__QueryRecordsWithAggregate</source>
+        </localActions>
+        <localActions>
+            <fullName>IdentifyObjectByName_179ak000002mLPB</fullName>
+            <description>Finds the Salesforce object API name by extracting an object name from the user input.</description>
+            <developerName>IdentifyObjectByName_179ak000002mLPB</developerName>
+            <invocationTarget>identifyObject</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>IdentifyObjectByName</localDeveloperName>
+            <masterLabel>Identify Object by Name</masterLabel>
+            <source>EmployeeCopilot__IdentifyObjectByName</source>
+        </localActions>
+        <localActions>
+            <fullName>SummarizeRecord_179ak000002mLPB</fullName>
+            <description>Summarizes a single Salesforce CRM record. You must call summarizeRecord only if the user explicitly asks for a summary (e.g: &apos;Summary&apos;, &apos;Recap&apos;, &apos;Highlights&apos;). This action should be called only when there isn&apos;t a more specific summarization action.</description>
+            <developerName>SummarizeRecord_179ak000002mLPB</developerName>
+            <invocationTarget>getRecordSummarizationPrompt</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>SummarizeRecord</localDeveloperName>
+            <masterLabel>Summarize Record</masterLabel>
+            <progressIndicatorMessage>Summarizing</progressIndicatorMessage>
+            <source>EmployeeCopilot__SummarizeRecord</source>
+        </localActions>
+        <localActions>
+            <fullName>QueryRecords_179ak000002mLPB</fullName>
+            <description>Finds and retrieves Salesforce CRM records based on user input and specific conditions, such as field values. This action automatically identifies the correct records and object type. e.g. &apos;Find all open opportunities created in the last 5 days sorted by created date.&apos;</description>
+            <developerName>QueryRecords_179ak000002mLPB</developerName>
+            <invocationTarget>queryRecords</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>QueryRecords</localDeveloperName>
+            <masterLabel>Query Records</masterLabel>
+            <source>EmployeeCopilot__QueryRecords</source>
+        </localActions>
+        <localDeveloperName>OOTBSingleRecordSummary</localDeveloperName>
+        <masterLabel>Single Record Summary</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is to provide a rich summary of a Salesforce CRM record</scope>
+        <source>EmployeeCopilot__OOTBSingleRecordSummary</source>
+    </localTopics>
+    <localTopics>
+        <fullName>Account_Attachment_16jak000001jxMj</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic should be called whenever there is a question related to Account files, attachments and answers are not available on the Account record as such</description>
+        <developerName>Account_Attachment_16jak000001jxMj</developerName>
+        <genAiPluginInstructions>
+            <description>Always add the Account/Person account name to the response like response if from Account/person account name</description>
+            <developerName>instruction_0_1776353858646</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_0_1776353858646</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Always return answers in nice presentable manner , display very nicely like standard salesforce LWC format</description>
+            <developerName>instruction_1_1776353858646</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>instruction_1_1776353858646</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Prioritize efficiency by ensuring responses are initiated promptly while maintaining accuracy and adherence to the Opportunity Attachment topic scope.</description>
+            <developerName>instructions_0_1776354107139</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1776354107139</masterLabel>
+            <sortOrder>2</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Prioritize efficiency by ensuring responses are initiated promptly while maintaining accuracy and adherence to the Opportunity Attachment topic scope.</description>
+            <developerName>instructions_1_1776354107139</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_1_1776354107139</masterLabel>
+            <sortOrder>3</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Use visually distinct and professional colors to enhance readability, and present responses in card formats with descriptive icons that align with the content of the response. Ensure the design adheres to accessibility standards and maintains consistency across all responses.</description>
+            <developerName>instructions_2_1776354107139</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_2_1776354107139</masterLabel>
+            <sortOrder>4</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If a user inquiry contains the term &apos;Report&apos;, &apos;Scan&apos;,&apos;lab report&apos; ensure this topic is invoked to retrieve relevant information from opportunity attachment files.</description>
+            <developerName>instructions_3_1776354107139</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_3_1776354107139</masterLabel>
+            <sortOrder>5</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>Always identify the user question and retrieve answers from respective content document chuck</description>
+            <developerName>instructions_4_1776354107139</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_4_1776354107139</masterLabel>
+            <sortOrder>6</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Account_file_attachment_179ak000002n64j</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Account_file_attachment_179ak000002n64j</fullName>
+            <description>This task will execute and call the prompt template to retrieve data from Account file attachments</description>
+            <developerName>Account_file_attachment_179ak000002n64j</developerName>
+            <invocationTarget>Account_file_attachment</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Account_file_attachment</localDeveloperName>
+            <masterLabel>Account_file_attachment</masterLabel>
+            <progressIndicatorMessage>Loading soon from Account attachment documents......</progressIndicatorMessage>
+            <source>Account_file_attachment</source>
+        </localActions>
+        <localDeveloperName>Account_Attachment</localDeveloperName>
+        <masterLabel>Account_Attachment</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is only to retrieve answers from Account attachment files</scope>
+        <source>Account_Attachment</source>
+    </localTopics>
+    <masterLabel>EmployeeCopilotPlanner</masterLabel>
+    <plannerActions>
+        <fullName>AnswerQuestionsWithKnowledge_16jak000001jxMj</fullName>
+        <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+        <developerName>AnswerQuestionsWithKnowledge_16jak000001jxMj</developerName>
+        <invocationTarget>streamKnowledgeSearch</invocationTarget>
+        <invocationTargetType>standardInvocableAction</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+        <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+        <masterLabel>Answer Questions with Knowledge</masterLabel>
+        <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+        <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+    </plannerActions>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlannerBundle>

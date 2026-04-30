@@ -1,0 +1,40 @@
+:host {
+    display: block;
+}
+
+/* Card styling */
+lightning-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Container spacing */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Input fields spacing */
+lightning-combobox {
+    width: 100%;
+}
+
+/* Add subtle hover effect */
+lightning-combobox:hover {
+    transform: translateY(-1px);
+    transition: 0.2s ease-in-out;
+}
+
+/* Optional: highlight required fields */
+.required-label::after {
+    content: " *";
+    color: red;
+}
+
+/* Responsive tweak */
+@media screen and (max-width: 600px) {
+    .container {
+        gap: 12px;
+    }
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Handles user requests related to finding doctors based on department/specialty and location. This includes queries about available doctors, specialists, or medical professionals in a specific city or hospital department.</description>
+    <developerName>Finding_Doctors</developerName>
+    <genAiFunctions>
+        <functionName>Fetch_Available_Doctors</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Identify the department (medical specialty) and location from the user query.
+
+Map the extracted values to:
+- department → medical specialty (e.g., Cardiology, Neurology)
+- location → city or hospital location
+
+If either value is missing, ask the user to provide it before proceeding.</description>
+        <developerName>instruction_0_1776323628092</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1776323628092</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Use the doctorFilter Lightning Type to collect or confirm the following inputs:
+- department (required)
+- location (required)
+
+Ensure both values are populated before invoking the action.</description>
+        <developerName>instruction_1_1776323628092</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1_1776323628092</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Invoke the &quot;Fetch Available Doctors&quot; action using the collected department and location.
+
+Pass the input in the correct structure expected by the system.</description>
+        <developerName>instruction_2_1776323628092</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2_1776323628092</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Display the list of doctors returned from the action using the doctorResponse Lightning Type.
+
+Each doctor should include:
+- Name
+- Department
+- Location
+- Experience</description>
+        <developerName>instruction_3_1776323628092</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_3_1776323628092</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If no doctors are found for the selected department and location, inform the user politely and suggest trying a different department or location.</description>
+        <developerName>instruction_4_1776323628092</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_4_1776323628092</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>After displaying the doctor list, prompt the user to select a doctor to view available appointment slots.
+
+Do not attempt to fetch slots in this topic.</description>
+        <developerName>instruction_5_1776323628092</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_5_1776323628092</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>- Find a cardiologist in Hyderabad
+- Show neurologists in Bangalore
+- I need an orthopedic doctor in Chennai
+- List oncology doctors near me
+- Any heart specialists in Hyderabad?</description>
+        <developerName>instruction_6_1776323628092</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_6_1776323628092</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>Finding_Doctors</localDeveloperName>
+    <masterLabel>Finding Doctors</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>You are responsible for:
+- Identifying the medical department or specialty requested by the user (e.g., Cardiology, Neurology, Orthopedics, Oncology).
+- Identifying the preferred location or city.
+- Fetching available doctors matching the criteria.
+- Displaying the list of doctors using a structured UI.
+
+This topic does not handle:
+- Appointment booking
+- Slot availability
+- Patient record management</scope>
+</GenAiPlugin>

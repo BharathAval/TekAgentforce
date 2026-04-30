@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_0_1776256716883</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_0_1776256716883</masterLabel>
+        <utterance>Schedule a Service Appointment</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_1_1776256716883</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_1_1776256716883</masterLabel>
+        <utterance>Cancel a Service Appointment</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_2_1776256716883</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_2_1776256716883</masterLabel>
+        <utterance>Reschedule a Service Appointment</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>Service Appointment management by internal users (CSRs)</description>
+    <developerName>Service_Appointment_Management</developerName>
+    <genAiFunctions>
+        <functionName>Cancel_Service_Appointment_179ak000002mLIj</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Modify_Service_Appointment_179ak000002mLIj</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Create, update, and delete Service Appointment records based on structured input, validating business rules and handling errors safely.</description>
+        <developerName>instructions_0_1776256900874</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_0_1776256900874</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When asked to create a service appointment go to Create Service Appointment action</description>
+        <developerName>instructions_1_1776256900874</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_1_1776256900874</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When asked to create a service Appointment for &apos;xyz&apos; always pass the value of xyz to accountName</description>
+        <developerName>instructions_2_1776256900874</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_2_1776256900874</masterLabel>
+        <sortOrder>2</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Always ask for the doctorName after getting the accountName so that for the doctor we can schedule the appointment.</description>
+        <developerName>instructions_3_1776256900874</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_3_1776256900874</masterLabel>
+        <sortOrder>3</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>After asking for the doctor’s name, always ask the user for the start date and time of the appointment.
+Use the provided value as StartDateTime.
+Always calculate EndDateTime by adding 1 hour to the StartDateTime.
+Use these calculated values as the inputs for StartDateTime and EndDateTime when creating the Service Appointment.</description>
+        <developerName>instructions_4_1776256900874</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_4_1776256900874</masterLabel>
+        <sortOrder>4</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>After attempting to create a Service Appointment, always verify the outcome.
+
+If no Service Appointment is created or returned, respond with:
+“We were unable to create an appointment. This time slot is already booked for &apos;doctorname&apos;”
+If the appointment is not created because the selected time slot is already booked or unavailable, respond with:
+“The selected time slot is already booked.”
+Do not confirm or describe a Service Appointment unless a valid appointment record exists.</description>
+        <developerName>instructions_5_1776256900874</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_5_1776256900874</masterLabel>
+        <sortOrder>5</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When asked to cancel a service appointment always ask for the appointment number and reason of cancellation.</description>
+        <developerName>instructions_6_1776256900874</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_6_1776256900874</masterLabel>
+        <sortOrder>6</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When asked to cancel a service appointment always ask for the appointment number and reason of cancellation.</description>
+        <developerName>instructions_7_1776256900874</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_7_1776256900874</masterLabel>
+        <sortOrder>7</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When asked to modify or reschedule a service appointment always ask for the appointment number and Start date and time. Always calculate EndDateTime by adding 1 hour to the StartDateTime.
+Use these calculated values as the inputs for StartDateTime and EndDateTime when creating the Service Appointment.</description>
+        <developerName>instruction_0_1776256716883</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1776256716883</masterLabel>
+        <sortOrder>8</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>After attempting to modify a Service Appointment, always verify the outcome.
+
+If no Service Appointment is modified or returned, respond with:
+“We were unable to create an appointment. This time slot is already booked. Please select a different time slot.&quot;</description>
+        <developerName>instruction_1_1776256716883</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1_1776256716883</masterLabel>
+        <sortOrder>9</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>Service_Appointment_Management</localDeveloperName>
+    <masterLabel>Service Appointment Management</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only create, modify, reschdule and cancel Service Appointments</scope>
+</GenAiPlugin>

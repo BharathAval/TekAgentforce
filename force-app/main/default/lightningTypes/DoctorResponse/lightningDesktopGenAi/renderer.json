@@ -1,0 +1,18 @@
+{
+  "collection" : {
+    "renderer" : {
+      "componentOverrides" : {
+        "$" : {
+          "definition" : "c/doctorList"
+        }
+      }
+    }
+  },
+  "renderer" : {
+    "componentOverrides" : {
+      "$" : {
+        "definition" : "c/doctorList"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "getDepartment" : {
+      "title" : "getDepartment",
+      "description" : "Identify the following entities from the user input:\n- Department (e.g., Gynecology, Pediatrics, Oncology)\n- Specialty (e.g., Cardiologist, Cancer Specialist, Child Specialist)",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "getLocation" : {
+      "title" : "getLocation",
+      "description" : "Identify the following entities from the user input:\n- Location (city, hospital name, or nearby reference)\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

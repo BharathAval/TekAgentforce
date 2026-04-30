@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Search Doctor">
+        <div class="slds-p-around_medium container">
+
+            <lightning-combobox
+                label="Choose the Department"
+                name="department"
+                value={department}
+                options={departmentOptions}
+                onchange={handleInputChange}
+                required>
+            </lightning-combobox>
+
+            <lightning-combobox
+                label="Choose the Location"
+                name="location"
+                value={location}
+                options={locationOptions}
+                onchange={handleInputChange}
+                required>
+            </lightning-combobox>
+
+        </div>
+    </lightning-card>
+</template>

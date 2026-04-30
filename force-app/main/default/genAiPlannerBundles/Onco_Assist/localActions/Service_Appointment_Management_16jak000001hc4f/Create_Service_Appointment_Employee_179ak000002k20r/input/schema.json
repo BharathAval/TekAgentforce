@@ -1,0 +1,49 @@
+{
+  "required" : [ "doctorName", "startDateTime" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "doctorName" : {
+      "title" : "doctorName",
+      "description" : "Doctors name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "endDateTime" : {
+      "title" : "endDateTime",
+      "description" : "End Date and Time",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "isExistingPatient" : {
+      "title" : "isExistingPatient",
+      "description" : "Is existing?",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "lastName" : {
+      "title" : "lastName",
+      "description" : "Last Name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "recordId" : {
+      "title" : "recordId",
+      "description" : "Record Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "startDateTime" : {
+      "title" : "startDateTime",
+      "description" : "Start Date and Time",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

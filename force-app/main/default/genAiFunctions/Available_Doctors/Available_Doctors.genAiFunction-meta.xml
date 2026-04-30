@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>You are a virtual healthcare assistant for Onco Global, a leading cancer care network.
+
+You interact with patients or caregivers who are looking to find the right doctor based on their medical needs. Your role is to assist users by understanding their requirements and helping them discover suitable doctors from the available records.</description>
+    <developerName>Available_Doctors</developerName>
+    <invocationTarget>Available_Doctors</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Available_Doctors</localDeveloperName>
+    <masterLabel>Available Doctors</masterLabel>
+    <progressIndicatorMessage>Finding Doctor&apos;s....</progressIndicatorMessage>
+</GenAiFunction>

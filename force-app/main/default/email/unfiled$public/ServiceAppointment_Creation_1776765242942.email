@@ -1,0 +1,48 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <div>
+   &nbsp; &nbsp;<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp;</span></span><img alt="logo" src="{[devName:logo2]}" style="max-width: 1297.32px; width: 80.9766px; height: 80.9896px;" title="logo" /><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Thanks for getting in touch with us&nbsp; &nbsp;&nbsp;</span></span>
+  </div>
+  <div><br /> <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi {{{ServiceAppointment.Account_Name__c}}},<br /> &nbsp; &nbsp;</span></span><br /> <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; This is a confirmation email regarding your appointment at Onco Global&nbsp;with&nbsp;<strong>{{{ServiceAppointment.Comments}}}</strong><br /> &nbsp; &nbsp; &nbsp; &nbsp; Here is your appointment number&nbsp;<strong>{{{ServiceAppointment.AppointmentNumber}}}</strong><br /> &nbsp; &nbsp; &nbsp; &nbsp; Please be available 30 minutes prior to your appointed time<strong>&nbsp;{{{ServiceAppointment.SchedStartTime_Text__c}}}</strong><br /> &nbsp; &nbsp; &nbsp; &nbsp; To learn more about us&nbsp;<a href="https://orgfarm-5296dd18da.my.site.com/oncoglobal/s/">Onco Global</a><br /> &nbsp; &nbsp; &nbsp; &nbsp; To reschedule or cancel your appointment, please Contact&nbsp;<a href="https://orgfarm-5296dd18da.my.site.com/oncoglobal/s/">Support</a><br /> <br /> Best&nbsp; Regards,</span></span><br /> <img alt="doctorImage" src="{[devName:doctorImage1]}" style="max-width: 1297.32px; width: 98.9583px; height: 93.9974px;" title="doctorImage" /><br /> <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Onco Global Team.<br /> <br /> ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span><br /> &nbsp; 
+   <div style="text-align: center;"><b>TERMS &amp; CONDITIONS</b>
+   </div>
+   <ul>
+    <li>All prices are inclusive of GST, wherever applicable.</li>
+    <li>Consultation is valid for 15 days.</li>
+    <li>Payments can be made via Cash (As per Income Tax Regulations) / online transfer/Debit Card/ Credit Card/ UPI Payments/ Demand Draft/ Cheque in favor of Sreyas Holistic Remedies Private Limited. In case of cheque payments, treatments will be initiated only after confirmation of payment credited to SHRPL.</li>
+    <li>Treatments are rendered only to the extent of the amount paid towards the package.</li>
+    <li>Payments made towards treatments/products are non-refundable.</li>
+    <li>In case a patient is unable to continue treatment because of medical issues, the same will be reviewed by the Medical Review Committee and only in cases of documented medical co-morbidities, a credit note may be given for the unutilized amount which can be utilized towards customer referrals/any other packages/treatments/products etc.</li>
+    <li>All credit notes and gift vouchers will have to be fully utilized within one year of their issuance.&nbsp;</li>
+    <li>Exchange shall be done only in the case of defective products and has to be done within ten (10) days of purchase, along with a valid copy of the purchase receipt. Exchange of products is only permissible at the same clinic location from where the purchase was made. In other cases, exchanged can be given only if the product is unopened, unused, and in its original packaging and within ten (10) days of purchase.</li>
+    <li>Products bought under discount/promotional schemes cannot be exchanged.</li>
+    <li>Any disputes arising from these terms and conditions or the treatments provided shall be resolved amicably. If unresolved, they will be subject to the jurisdiction of the courts in Secunderabad, Telangana.</li>
+    <li>For further reference, please retain the Package Subscription issued to you for any product or treatment.</li>
+    <li>This is a Package Subscription and not a tax invoice under GST. If you wish to avail a GST invoice reach out to our Clinic front desk or email to clinic mail as mentioned in the package subscription.</li>
+    <li>By buying our products or availing our treatments, you agree to the above terms and conditions. Further we reserve the right to alter/modify any terms and condition at any point of time without assigning any reason or intimation whatsoever. &nbsp;</li>
+   </ul>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For feedback or concerns, please write to us at&nbsp;<a href="mailto:feedback@olivaclinic.com">feedback@oncoglobal.com</a></p> <br /> <br /> <br /> <br /> <br /> &nbsp;
+  </div>
+  <div id="" style="left: 7.99479px; top: 21.0026px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.99479px; top: 21.0026px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.99479px; top: 7.99479px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.99479px; top: 7.99479px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 378.854px; top: 7.99479px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 378.854px; top: 7.99479px;">
+   &nbsp;
+  </div>
+ </body>
+</html>

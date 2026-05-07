@@ -85,13 +85,13 @@ This project delivers a seamless digital healthcare experience using **Salesforc
 📚 Resources
 
 📄 Documentation: 
-[https://teams.microsoft.com/l/message/19:0cf3bba54fb5407c82b9d2415a3ae8ad@thread.v2/1777552854119?context=%7B%22contextType%22%3A%22chat%22%7D]
+https://docs.google.com/document/d/1l8KM1b0VDr9uctJ2nFy2t-xG-JfpMg0r/edit
 
 🎥 Demo Video: 
-[https://teams.microsoft.com/l/message/19:0cf3bba54fb5407c82b9d2415a3ae8ad@thread.v2/1777553277986?context=%7B%22contextType%22%3A%22chat%22%7D]
+(https://drive.google.com/file/d/1BrnOq_YL8xsxNSBFJcW5uHnhxmv2Fh64/view?usp=sharing)
 
 📊 Architecture PowerPoint: 
-[https://teams.microsoft.com/l/message/19:0cf3bba54fb5407c82b9d2415a3ae8ad@thread.v2/1777552864338?context=%7B%22contextType%22%3A%22chat%22%7D]
+(https://docs.google.com/presentation/d/1ET1b5ZJFnt6bmPQW-96rT-aFf9GAJI7i/edit?slide=id.p1#slide=id.p1)
 
 🌐 Experience Site URL: [https://orgfarm-5296dd18da.my.site.com/oncoglobal/s/]
 
